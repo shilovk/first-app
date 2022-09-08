@@ -1,16 +1,11 @@
 import React from "react";
 
-import Hello from "./Hello";
+import ProductCard from "./ProductCard";
 
 class App extends React.Component {
 	render() {
-		const { name } = this.props;
 		return (
-			<div>
-				<Hello name="World" />
-				<Hello name="Mars" />
-				<Hello name="Moon" />
-			</div>
+			<ProductCard product={this.props.product} />
 		);
 	}
 }
