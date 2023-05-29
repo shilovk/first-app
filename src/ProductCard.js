@@ -1,4 +1,5 @@
 import React from "react";
+import DiscountModal from "./DiscountModal";
 
 class ProductCard extends React.Component {
 	render() {
@@ -24,6 +25,7 @@ class ProductCard extends React.Component {
 								:	<>${Price}</>
 						}
 					</div>
+					<DiscountModal />
 				</div>
 			</div>
 		);
