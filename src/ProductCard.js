@@ -6,7 +6,7 @@ class ProductCard extends React.Component {
 			return <div>Empty product</div>;
 		};
 		const {
-			product: {Title, Price, Cover, Description}
+			product: { Title, Price, Cover, Description, Discount }
 		} = this.props;
 
 		return (
@@ -15,11 +15,16 @@ class ProductCard extends React.Component {
 					<img style={styles.image} src={Cover} alt={Title} />
 				</div>
 				<div style={styles.cardBody}>
-					<div>{Title}</div>
-					<div>{Price}</div>
+					<div style={styles.title}>{Title}</div>
 					<div>{Description}</div>
+					<div style={styles.price}>
+						{
+							Discount ?
+								<><s>${Price}</s> ${Math.floor(Price * 0.95)}</>
+								:	<>${Price}</>
+						}
+					</div>
 				</div>
-
 			</div>
 		);
 	}
@@ -29,15 +34,34 @@ export default ProductCard;
 
 const styles = {
 	container: {
-		display: 'flex'
+		display: "flex",
+		fontFamily: "sans-serif"
 	},
 	imageBox: {
-		maxWidth: '200px'
+		maxWidth: "200px",
+		minHeight: "200px",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center"
 	},
 	image: {
-		width: '100%'
+		width: "100%"
 	},
 	cardBody: {
-		flex: '1'
+		flex: "1",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "space-evenly",
+		padding: "15px 10px"
+	},
+	title: {
+		fontWeight: "bold",
+		fontSize: "1.1rem"
+	},
+	price: {
+		fontWeight: "bold",
+		fontSize: "1.05rem",
+		letterSpacing: ".05rem"
+
 	}
 }

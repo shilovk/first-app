@@ -1,17 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import App from "./App";
 
-const product = {
-	'Title': 'Apple Macbook Pro 16\'',
-	'Cover': 'https://micro-line.ru/images/thumbnails/340/340/detailed/700/952594.jpg',
-	'Price': '$2800',
-	'Description': 'For work and fun.',
-	'Discount': true
-};
+import "./index.css"
 
-ReactDOM.render(
-	<App product={product} />,
-	document.getElementById('root')
-);
+import products from "./products.json"
+
+console.log(products);
+
+const container = document.getElementById("root");
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<App products={products} />);

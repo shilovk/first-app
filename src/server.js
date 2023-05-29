@@ -5,7 +5,7 @@ const app = express();
 
 const render = require("./render").default;
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
 	res.send(`
 		<!DOCTYPE html>
 		<html>
@@ -19,5 +19,5 @@ app.get('/', (req, res) => {
 	`);
 });
 
-app.listen(3007, () => console.log('Server is ready on 3007'));
+app.listen(3007, () => console.log("Server is ready on 3007"));
 console.log(render());

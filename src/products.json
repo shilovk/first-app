@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "Title": "Apple Macbook Pro 16'",
+    "Cover": "macbook.jpg",
+    "Price": "2799",
+    "Description": "For work and fun.",
+    "Discount": false
+  },
+  {
+    "Id": 2,
+    "Title": "Apple Macbook Pro 14'",
+    "Cover": "macbook.jpg",
+    "Price": "1299",
+    "Description": "For work and fun.",
+    "Discount": false
+  },
+  {
+    "Id": 3,
+    "Title": "Apple Macbook Pro 13'",
+    "Cover": "macbook.jpg",
+    "Price": "699",
+    "Description": "For work and fun.",
+    "Discount": true
+  }
+]
