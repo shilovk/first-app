@@ -7,7 +7,8 @@ class ProductCard extends React.Component {
 			return <div>Empty product</div>;
 		};
 		const {
-			product: { Title, Price, Cover, Description, Discount }
+			product: { Title, Price, Cover, Description, Discount },
+			addToCart
 		} = this.props;
 
 		return (
@@ -26,6 +27,7 @@ class ProductCard extends React.Component {
 						}
 					</div>
 					<DiscountModal />
+					<button onClick={() => addToCart(this.props.product)}>Add to Cart</button>
 				</div>
 			</div>
 		);
