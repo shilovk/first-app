@@ -15,6 +15,7 @@ class ProductsList extends React.Component {
   render() {
     return (
       <div>
+        <h1>Products</h1>
         <button onClick={() => this.toggleDiscounts()}>
           Show only discounts
         </button>
