@@ -1,6 +1,7 @@
 import React from "react";
 
 import ProductsList from "./ProductsList";
+import Cart from "./Cart";
 
 class App extends React.Component {
 	render() {
@@ -8,6 +9,7 @@ class App extends React.Component {
 			<>
 				<header style={styles.header}>tnShop</header>
 				<main style={styles.main}>
+					<Cart />
 					<ProductsList products={this.props.products} />
 				</main>
 				<footer style={styles.footer}>
